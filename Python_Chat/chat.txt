@@ -1,0 +1,18 @@
+[
+    {
+        "image": "python_icon",
+        "text": "test"
+    },
+    {
+        "image": "html_icon",
+        "text": "html"
+    },
+    {
+        "image": "python_icon",
+        "text": "\u30c6\u30b9\u30c8"
+    },
+    {
+        "image": "python_icon",
+        "text": "\u30c6\u30b9\u30c8"
+    }
+]
