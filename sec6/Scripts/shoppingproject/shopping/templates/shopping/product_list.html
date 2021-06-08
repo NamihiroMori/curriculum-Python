@@ -11,7 +11,7 @@
   <hr>
   <ul>
     {% for product in products %}
-      <li>({{ product.category.name }}) {{ product.name }}: {{ product.price }}円</li>
+      <li>({{ product.category.name }}) <a href="{% url 'product_detail' product.id %}">{{ product.name }}:</a> {{ product.price }}円</li>
     {% endfor %}
   </ul>
 </body>
