@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ECサイト - カート一覧</title>
+</head>
+<body>
+  <h3>カート内一覧</h3>
+  <a href="{% url 'product_list' %}">商品一覧に戻る</a>
+  <hr>
+
+  <ul>
+    {% for product in products %}
+      <li>{{product.name}}: {{product.price}}円
+        <form method="POST" action="{% url 'cart_delete' product.id %}">
+          {% csrf_token %}
+          <input type="submit" value="削除">
+        </form>
+      </li>
+    {% endfor %}
+  </ul>
+
+  合計金額: {{total_price}}円
+</body>
+</html>

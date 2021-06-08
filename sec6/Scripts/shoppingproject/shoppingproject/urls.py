@@ -20,5 +20,8 @@ import shopping.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', shopping.views.product_list, name='product_list'),
-    path('products/<int:product_id>', shopping.views.product_detail, name='product_detail')
+    path('products/<int:product_id>', shopping.views.product_detail, name='product_detail'),
+    path('cart/', shopping.views.product_cart, name='product_cart'),
+    path('cart/<int:product_id>/add', shopping.views.cart_add, name='cart_add'),
+    path('cart/<int:product_id>/delete', shopping.views.cart_delete, name='cart_delete')
 ]

@@ -9,5 +9,11 @@
   <a href="{% url 'product_list' %}">商品一覧</a>
   <hr>
   <h4>{{ product.name }}:{{ product.price }}円</h4>
+  
+  <form action="{% url 'cart_add' product.id %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="カートに追加">
+  </form>
+
 </body>
 </html>
